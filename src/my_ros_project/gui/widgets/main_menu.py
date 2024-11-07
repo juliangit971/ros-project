@@ -14,7 +14,7 @@ class MainMenuWidget():
         self.initUI()
         
         # Création d'un QTimer pour actualiser les données ROS périodiquement
-        self.timer = QTimer()
+        self.timer = QTimer(self.widget)
         self.timer.timeout.connect(self.update_sensor_data)
         self.timer.start(100) # Actualisation toutes les 100 ms (Exécuter cette fonction chaque 100ms)
         
@@ -22,8 +22,8 @@ class MainMenuWidget():
     def initUI(self):
         # Interface graphique avec PyQt5
         self.layout = QVBoxLayout()
-        self.label = QLabel(f"Valeur du Capteur: {self.value}")
-        self.refresh_button = QPushButton("Resubscribe")
+        self.label = QLabel(f"Valeur du Capteur: {self.value}", self.widget)
+        self.refresh_button = QPushButton("Resubscribe", self.widget)
         
         self.layout.addWidget(self.label)
         self.layout.addWidget(self.refresh_button)
