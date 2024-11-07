@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QDesktopWidget
 
 
 class MainWindow():
@@ -20,11 +20,10 @@ class MainWindow():
         self.center_window()
         
         
-    def center_window(self):
-        qr = self.window.frameGeometry()
-        cp = self.window.screen().availableGeometry().center()
-
-        qr.moveCenter(cp)
-        self.window.move(qr.topLeft())
+    def center_window(self):        
+        qtRectangle = self.window.frameGeometry()
+        centerPoint = QDesktopWidget().availableGeometry().center()        
+        qtRectangle.moveCenter(centerPoint)
+        self.window.move(qtRectangle.topLeft())
     
 
