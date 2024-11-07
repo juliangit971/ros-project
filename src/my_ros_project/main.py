@@ -2,8 +2,8 @@
 
 import sys
 import time
-from PyQt6.QtWidgets import QApplication, QMessageBox
-from PyQt6.QtCore import Qt, pyqtSignal
+from PyQt5.QtWidgets import QApplication, QMessageBox
+from PyQt5.QtCore import Qt, pyqtSignal
 
 from subscriber_nodes.subscriber_node import SensorSubscriber
 

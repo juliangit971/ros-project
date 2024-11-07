@@ -104,7 +104,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES my_ros_project
-#  CATKIN_DEPENDS PyQt6 rospy std_msgs
+#  CATKIN_DEPENDS PyQt5 rospy std_msgs
 #  DEPENDS system_lib
 )
 
