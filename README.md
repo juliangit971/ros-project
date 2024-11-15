@@ -3,7 +3,23 @@
 ## Comment lancer le projet ?
 
 Tout d'abord, ouvrir un terminal et aller à la racine du projet (là où se trouve ce README). Lancer ensuite un `catkin_make` afin de build l'environnement.
+
+
+Vous devez aussi installer les dépendances suivantes :
+
+`GStreamer` pour les codecs vidéo
+```sh
+apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio
+```
+
+`pyqt5.qtmultimedia` pour afficher la vidéo
+```sh
+sudo apt install python3-pyqt5.qtmultimedia
+```
+
 Une fois cela fait, choisir l'un des démarrage ci-dessous pour lancer le programme:
+
+_NOTE : Si vous ne voyez pas la vidéo de test se lancer et que vous voyez un rectangle noir à la place, redémarrer le projet plusieurs fois pour qu'elle apparaisse. Le système n'est pas encore stable._
 
 
 ### # Démarrage simplifié

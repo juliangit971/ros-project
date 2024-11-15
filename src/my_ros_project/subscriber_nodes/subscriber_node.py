@@ -1,7 +1,7 @@
 #!/usr/bin/env
 
 import rospy
-from std_msgs.msg import String
+from std_msgs.msg import Int32
 from subscriber_nodes.subscriber_superclass import SubscriberSuperclass
 
 
@@ -16,7 +16,7 @@ class SensorSubscriber(SubscriberSuperclass):
     # Override
     # Abonnement aux topics
     def subscribe(self):
-        super().subscribe('sensor_topic', String)
+        super().subscribe('sensor_topic', Int32)
         
 
     # Override

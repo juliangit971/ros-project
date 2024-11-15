@@ -1,21 +1,22 @@
 #!/usr/bin/env
 
 import rospy
-from std_msgs.msg import String
+import random 
+from std_msgs.msg import Int32
 
 
 
 def talk_to_me():
-    pub = rospy.Publisher('sensor_topic', String, queue_size=10)
+    pub = rospy.Publisher('sensor_topic', Int32, queue_size=10)
     
     rospy.init_node('publisher_node', anonymous=True)
 
-    rate =rospy.Rate(1)
+    rate = rospy.Rate(1)
 
     rospy.loginfo("Publisher Node started, now publishing messages...")
     
     while not rospy.is_shutdown():
-        msg = "Hello Emil - %s" % rospy.get_time()
+        msg = random.randint(0, 1000)
         pub.publish(msg)
         rate.sleep() 
 

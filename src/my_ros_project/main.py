@@ -43,12 +43,12 @@ def main():
     
     # Initialisation de la fenêtre principale
     program_window = MainWindow()
-    main_widget = MainMenuWidget(ros_subscriber)
+    main_widget = MainMenuWidget(program_window, ros_subscriber)
     
-    program_window.set_widget(main_widget.get_widget())
+    program_window.set_widget(main_widget)
     
 
-    app.exec()
+    sys.exit(app.exec())
 
 
 
